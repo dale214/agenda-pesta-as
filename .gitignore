@@ -1,0 +1,26 @@
+*.db
+*respaldo*
+respaldo_publicacion/
+app_antes_admin.py
+app_codigo_nuevo_respaldo.py
+app_respaldo_admin.py
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Proteger archivos con contraseñas
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+
+# Archivos temporales y configuraciones locales
+.vscode/
+*.log
+app - copia.py
+app_antes_postgres.py
+app_neon.py
+Nuevo Documento de texto.txt
+.env.txt
+turnos*.db
