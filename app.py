@@ -249,45 +249,147 @@ def horarios_disponibles(fecha_texto):
 ESTILOS = """
 <style>
 * { box-sizing: border-box; }
+
 body {
-    margin: 0; padding: 20px;
+    margin: 0;
+    padding: 20px;
     font-family: Arial, sans-serif;
-    background: #fff5fa; color: #35232d;
+    background: #111111;
+    color: #f5f1e8;
 }
+
 .contenedor {
-    max-width: 1050px; margin: 20px auto;
-    background: white; padding: 25px;
-    border-radius: 16px; box-shadow: 0 4px 18px #00000012;
+    max-width: 1050px;
+    margin: 20px auto;
+    background: #1c1c1c;
+    color: #f5f1e8;
+    padding: 25px;
+    border: 1px solid #b99a52;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #00000066;
 }
-h1, h2 { color: #a52d68; }
-input, select, button {
-    width: 100%; padding: 12px; margin: 7px 0 14px;
-    border: 1px solid #e0c6d5; border-radius: 8px;
+
+h1, h2 {
+    color: #d4af62;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0 14px;
+    border: 1px solid #8c7747;
+    border-radius: 8px;
     font-size: 16px;
+    background: #ffffff;
+    color: #222222;
 }
+
 button, .boton {
-    display: inline-block; width: auto;
-    background: #b83d79; color: white; border: none;
-    padding: 11px 16px; border-radius: 8px;
-    text-decoration: none; cursor: pointer;
+    display: inline-block;
+    width: auto;
+    background: #c5a253;
+    color: #111111;
+    border: 1px solid #d9bd79;
+    padding: 11px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
 }
-button:hover, .boton:hover { background: #92265d; }
-button:disabled { opacity: .5; cursor: not-allowed; }
-.secundario { background: #655560; }
-.peligro { background: #b52e3c; }
-.ok { color: #187447; font-weight: bold; }
-.pendiente { color: #a35d00; font-weight: bold; }
+
+button:hover, .boton:hover {
+    background: #e0c477;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.secundario {
+    background: #444444;
+    color: #ffffff;
+}
+
+.peligro {
+    background: #b52e3c;
+    color: #ffffff;
+}
+
+.ok {
+    color: #75d6a0;
+    font-weight: bold;
+}
+
+.pendiente {
+    color: #e5bd62;
+    font-weight: bold;
+}
+
 .aviso, .exito, .error {
-    padding: 12px; border-radius: 8px; margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px 0;
 }
-.aviso { background: #fff0f6; }
-.exito { background: #e8f8ee; }
-.error { background: #ffe9e9; }
-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eadce4; }
-th { background: #fff0f6; }
-form.inline { display: inline-block; margin: 0; }
-form.inline button { margin: 3px; }
+
+.aviso {
+    background: #29251c;
+    border: 1px solid #8c7747;
+}
+
+.exito {
+    background: #173526;
+    color: #b9f0ce;
+}
+
+.error {
+    background: #3a2020;
+    color: #ffd0d0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #1c1c1c;
+    color: #f5f1e8;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #51462f;
+}
+
+th {
+    background: #30291b;
+    color: #e0c477;
+}
+
+form.inline {
+    display: inline-block;
+    margin: 0;
+}
+
+form.inline button {
+    margin: 3px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .contenedor {
+        margin: 5px auto;
+        padding: 16px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
 nav { margin-bottom: 20px; }
 nav a { margin-right: 12px; }
 .pequeno { font-size: 13px; color: #715c69; }
